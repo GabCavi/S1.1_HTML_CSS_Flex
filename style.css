@@ -1,0 +1,185 @@
+/* -------------------- RESET BÀSIC -------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #ffffff;
+}
+
+/* Evitem scroll horitzontal inesperat */
+body {
+  overflow-x: hidden;
+}
+
+/* Contenidor central reutilitzable */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Classe base de “caixa de color” per simplificar estils */
+.box {
+  padding: 0.8rem 1rem;
+}
+
+/* -------------------- CAPÇALERA -------------------- */
+
+.topbar {
+  background: #00091a;        /* marc fosc exterior */
+  padding: 0.8rem 0;
+}
+
+.topbar__inner {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Blocs dins la capçalera */
+.logo,
+.social {
+  background: #e25b5b;
+  min-width: 120px;
+  text-align: center;
+}
+
+.nav {
+  background: #e25b5b;
+  flex: 1;                    /* ocupa tot l’espai central */
+  text-align: center;
+}
+
+/* -------------------- BANNER -------------------- */
+
+.banner {
+  background: #000;           /* marc negre exterior */
+  padding: 0.8rem 0;
+}
+
+.box--banner {
+  background: #ffb100;        /* groc del banner */
+  font-weight: bold;
+}
+
+/* -------------------- COS PRINCIPAL -------------------- */
+
+.main {
+  background: #00091a;
+  padding: 1.5rem 0;
+}
+
+/* Layout a dues columnes: contingut + sidebar */
+.layout {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Columna esquerra gran */
+.box--content {
+  flex: 3;
+  background: #22263a;
+}
+
+/* Grid 2x2 d’articles */
+.articles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.box--article {
+  background: #255b93;
+  flex: 1 1 calc(50% - 0.8rem); /* dues columnes */
+}
+
+/* Navegació inferior dins la columna esquerra */
+.box--nav {
+  background: #557fae;
+}
+
+/* Columna dreta: publicitat */
+.box--sidebar {
+  flex: 1;
+  background: #e25b5b;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.box--publi {
+  background: #ffdd33;
+}
+
+/* -------------------- PEU DE PÀGINA -------------------- */
+
+.pie {
+  background: #000;
+  padding: 0.8rem 0 1.5rem;
+}
+
+.box--footer {
+  background: #f3e88c;
+}
+
+/* -------------------- MEDIA QUERIES -------------------- */
+/* Nivell 2: Tablet (layout una mica més estret) */
+@media (max-width: 1024px) {
+
+  /* Continuem amb header en fila, però donem més flexibilitat */
+  .logo,
+  .social {
+    min-width: 100px;
+  }
+
+  /* El cos passa a columnes apilades:
+     contingut a sobre, sidebar a sota */
+  .layout {
+    flex-direction: column;
+  }
+
+  .box--sidebar {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .box--publi {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+/* Nivell 3: Mòbil */
+@media (max-width: 600px) {
+
+  /* La capçalera es fa en columna */
+  .topbar__inner {
+    flex-direction: column;
+  }
+
+  .logo,
+  .nav,
+  .social {
+    text-align: center;
+  }
+
+  /* Els articles passen a una sola columna */
+  .articles-grid {
+    flex-direction: column;
+  }
+
+  .box--article {
+    flex: 1 1 100%;
+  }
+
+  /* Publicitat també en columna */
+  .box--sidebar {
+    flex-direction: column;
+  }
+}
