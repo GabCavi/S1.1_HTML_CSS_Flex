@@ -4,6 +4,24 @@
 *::after {
   box-sizing: border-box;
 }
+/* Wrappers exteriors negres */
+.wrapper {
+  background: #000000;
+  padding: 1rem 0;
+  margin-bottom: 2rem; /* separació visual com la maqueta */
+}
+
+.wrapper--top {
+  background: #000; /* pot ser igual o diferent */
+}
+
+.wrapper--main {
+  background: #000;
+}
+
+.wrapper--footer {
+  background: #000;
+}
 
 body {
   margin: 0;
@@ -20,25 +38,28 @@ body {
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0;
 }
 
 /* Classe base de “caixa de color” per simplificar estils */
 .box {
-  padding: 0.8rem 1rem;
+  padding: 1rem;
 }
 
 /* -------------------- CAPÇALERA -------------------- */
 
 .topbar {
-  background: #00091a;        /* marc fosc exterior */
-  padding: 0.8rem 0;
+  background: #000000;
+  padding: 1rem;     /* crea el marc negre */
 }
 
 .topbar__inner {
+  background: #00091a;   /* color del bloc interior */
+  padding: 0;
   display: flex;
   gap: 1rem;
 }
+
 
 /* Blocs dins la capçalera */
 .logo,
@@ -55,22 +76,21 @@ body {
 }
 
 /* -------------------- BANNER -------------------- */
-
 .banner {
-  background: #000;           /* marc negre exterior */
-  padding: 0.8rem 0;
+  background: #000;
+  padding: 1rem;
 }
 
-.box--banner {
-  background: #ffb100;        /* groc del banner */
-  font-weight: bold;
+.banner__inner {
+  background: #ffb100;
+  padding: 1.5rem;
 }
 
 /* -------------------- COS PRINCIPAL -------------------- */
 
 .main {
-  background: #00091a;
-  padding: 1.5rem 0;
+  background: #000000;
+  padding: 0;
 }
 
 /* Layout a dues columnes: contingut + sidebar */

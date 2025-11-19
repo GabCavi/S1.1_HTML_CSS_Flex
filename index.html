@@ -7,59 +7,65 @@
   <title>Maquetació wireframe</title> <!-- Títol de la pàgina que surt a la pestanya del navegador -->
   <link rel="stylesheet" href="style.css">  <!-- Enllaç al fitxer CSS extern per a l'estil; afegit a la carpeta -->
 </head>
+<body>
 
-<body> <!-- BODY és el contingut visible de la pàgina -->
+  <!-- ❗ WRAPPER 1: CAPÇALERA + BANNER -->
+  <div class="wrapper wrapper--top">
 
-  <!-- CAPÇALERA -->
-  <header class="topbar"> <!-- Utilitzes CLASS=x perque al CSS, puguis dir .topbar { ... } i estilitzar-la -->
-    <div class="container topbar__inner">
-      <!-- Bloc esquerre -->
-      <div class="logo box">.logo</div>
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <div class="logo box">.logo</div>
+        <nav class="nav box">.nav</nav>
+        <div class="social box">.social</div>
+      </div>
+    </header>
 
-      <!-- Navegació principal -->
-      <nav class="nav box">.nav</nav>
+    <section class="banner">
+      <div class="container banner__inner box box--banner">.banner</div>
+    </section>
 
-      <!-- Xarxes socials -->
-      <div class="social box">.social</div>
-    </div>
-  </header>
+  </div> <!-- Fi wrapper 1 -->
 
-  <!-- BANNER PRINCIPAL -->
-  <section class="banner">
-    <div class="container banner__inner box box--banner">.banner</div>
-  </section>
 
-  <!-- COS PRINCIPAL -->
-  <main class="main">
-    <div class="container layout">
 
-      <!-- Columna esquerra: articles + navegació -->
-      <section class="content box box--content">
+  <!-- ❗ WRAPPER 2: ARTICLES + PUBLICITAT -->
+  <div class="wrapper wrapper--main">
 
-        <!-- Grid d’articles -->
-        <div class="articles-grid">
-          <article class="article box box--article">.article</article>
-          <article class="article box box--article">.article</article>
-          <article class="article box box--article">.article</article>
-          <article class="article box box--article">.article</article>
-        </div>
+    <main class="main">
+      <div class="container layout">
 
-        <!-- Navegació inferior -->
-        <nav class="navegacion box box--nav">.navegacion</nav>
-      </section>
+        <section class="content box box--content">
+          <div class="articles-grid">
+            <article class="article box box--article">.article</article>
+            <article class="article box box--article">.article</article>
+            <article class="article box box--article">.article</article>
+            <article class="article box box--article">.article</article>
+          </div>
 
-      <!-- Columna dreta: publicitat -->
-      <aside class="sidebar box box--sidebar">
-        <div class="publicidad box box--publi">.publicidad</div>
-        <div class="publicidad box box--publi">.publicidad</div>
-      </aside>
-    </div>
-  </main>
+          <nav class="navegacion box box--nav">.navegacion</nav>
+        </section>
 
-  <!-- PEU DE PÀGINA -->
-  <footer class="pie">
-    <div class="container box box--footer">.pie</div>
-  </footer>
+        <aside class="sidebar box box--sidebar">
+          <div class="publicidad box box--publi">.publicidad</div>
+          <div class="publicidad box box--publi">.publicidad</div>
+        </aside>
+
+      </div>
+    </main>
+
+  </div> <!-- Fi wrapper 2 -->
+
+
+
+  <!-- ❗ WRAPPER 3: PEU DE PÀGINA -->
+  <div class="wrapper wrapper--footer">
+
+    <footer class="pie">
+      <div class="container box box--footer">.pie</div>
+    </footer>
+
+  </div> <!-- Fi wrapper 3 -->
 
 </body>
+
 </html>
